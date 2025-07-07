@@ -24,7 +24,7 @@ app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "login.html"));
 });
 
-sequelize.sync({ force: false });
+sequelize.sync({ force: true });
 
 app.listen(port, () => {
   console.log(
